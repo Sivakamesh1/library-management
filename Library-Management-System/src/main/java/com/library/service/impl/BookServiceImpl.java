@@ -18,17 +18,14 @@ import org.springframework.stereotype.Service;
 @Service
 @Slf4j
 public class BookServiceImpl implements BookService{
-	private final BorrowerRepository borrowerRepository;
-    private final LibraryMapper mapper;
-    private final BookRepository bookRepository;
-
-    @Autowired
-    public BookServiceImpl(BorrowerRepository borrowerRepository, LibraryMapper mapper, BookRepository bookRepository) {
-        this.borrowerRepository = borrowerRepository;
-        this.mapper = mapper;
-        this.bookRepository = bookRepository;
-    }
-
+	
+	@Autowired
+	private BorrowerRepository borrowerRepository;
+	@Autowired
+    private LibraryMapper mapper;
+	@Autowired
+    private BookRepository bookRepository;
+	
     @Override
     public BookDto createBook(BookDto bookDto) {
         validateIsbn(bookDto);
