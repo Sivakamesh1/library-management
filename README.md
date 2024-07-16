@@ -1,4 +1,4 @@
-# Library System
+# Library Management System
 
 A simple library system API built with Spring Boot and Maven.
 
