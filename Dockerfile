@@ -1,4 +1,4 @@
 FROM openjdk:17-jdk-alpine
-ADD target/*.jar app.jar
+ADD target/library.jar library.jar
 EXPOSE 9090
-ENTRYPOINT ["sh","-c","java -jar /app.jar"]
+ENTRYPOINT ["sh","-c","java -jar /library.jar"]
