@@ -97,7 +97,6 @@
 					</excludes>
 				</configuration>
 			</plugin>
-
 		</plugins>
 		<finalName>library</finalName>
 	</build>
