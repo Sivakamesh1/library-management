@@ -1,74 +1,58 @@
-# library-management
+# Library System
 
-library-management
-A simple library management system API built with Spring Boot and Maven.
+A simple library system API built with Spring Boot and Gradle.
 
-**Features**
-<<<<<<< HEAD
+## Features
 
-=======
->>>>>>> d350bbe26c1a0b976c1b3ce684fa19a3f70e3ad4
-Register a new borrower to the library.
-Register a new book to the library.
-Get a list of all books in the library.
-Borrow a book with a particular book id.
-Return a borrowed book.
-<<<<<<< HEAD
+- Register a new borrower to the library.
+- Register a new book to the library.
+- Get a list of all books in the library.
+- Borrow a book with a particular book id.
+- Return a borrowed book.
 
+## Data Models
 
-**Data Models**
+### Borrower
+- `id`: Unique identifier.
+- `name`: Name of the borrower.
+- `email`: Email address of the borrower.
 
-=======
-**Data Models**
->>>>>>> d350bbe26c1a0b976c1b3ce684fa19a3f70e3ad4
-Borrower
-id: Unique identifier.
-name: Name of the borrower.
-email: Email address of the borrower.
-<<<<<<< HEAD
+### Book
+- `id`: Unique identifier.
+- `isbn`: ISBN number of the book.
+- `title`: Title of the book.
+- `author`: Author of the book.
+## Prerequisites
 
-**Book**
+- JDK 17 or higher
+- Docker (optional, for containerization)
+- Gradle (if not using the provided Gradle Wrapper)
 
+## Build and Run the Project
 
-=======
-**Book**
->>>>>>> d350bbe26c1a0b976c1b3ce684fa19a3f70e3ad4
-id: Unique identifier.
-isbn: ISBN number of the book.
-title: Title of the book.
-author: Author of the book.
-<<<<<<< HEAD
+### Using Gradle Wrapper
 
+You can use the provided Gradle Wrapper to build and run the project.
 
-=======
->>>>>>> d350bbe26c1a0b976c1b3ce684fa19a3f70e3ad4
-**Prerequisites**
-JDK 17 or higher
-Docker (optional, for containerization)
-Gradle (if not using the provided Gradle Wrapper)
-Build and Run the Project
-Using maven
+#### Build the Project
 
-
-**Build the Project**
-<<<<<<< HEAD
-
-=======
->>>>>>> d350bbe26c1a0b976c1b3ce684fa19a3f70e3ad4
-mvn clean install
+```bash
+./gradlew build
 
 #### Run the Project
 
-**Build the Docker Image**
-Ensure that Docker is installed and running on your machine.
-Build the Docker image using the following command:
-docker build -t library-management-system .
-<<<<<<< HEAD
+./gradlew bootRun
+```
 
+### Build the Docker Image
+1. Ensure that Docker is installed and running on your machine.
+2. Build the Docker image using the following command:
+```bash
+docker build -t library-service .
+```
 
-=======
->>>>>>> d350bbe26c1a0b976c1b3ce684fa19a3f70e3ad4
-**Run the Docker Container**
+### Run the Docker Container
 Run the Docker container from the image you just built:
-
-docker run -p 9191:9090 library-management-system:latest
+```bash
+docker run -p 8080:8080 library-service
+```
