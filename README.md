@@ -1,6 +1,6 @@
 # Library System
 
-A simple library system API built with Spring Boot and Gradle.
+A simple library system API built with Spring Boot and Maven.
 
 ## Features
 
@@ -26,33 +26,23 @@ A simple library system API built with Spring Boot and Gradle.
 
 - JDK 17 or higher
 - Docker (optional, for containerization)
-- Gradle (if not using the provided Gradle Wrapper)
-
-## Build and Run the Project
-
-### Using Gradle Wrapper
-
-You can use the provided Gradle Wrapper to build and run the project.
+- Maven
 
 #### Build the Project
 
 ```bash
-./gradlew build
-
-#### Run the Project
-
-./gradlew bootRun
+mvn clean install
 ```
 
 ### Build the Docker Image
 1. Ensure that Docker is installed and running on your machine.
 2. Build the Docker image using the following command:
 ```bash
-docker build -t library-service .
+docker build -t library-management-system .
 ```
 
 ### Run the Docker Container
 Run the Docker container from the image you just built:
 ```bash
-docker run -p 8080:8080 library-service
+docker run -p 9191:9090 library-management-system:latest
 ```
