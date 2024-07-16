@@ -4,11 +4,14 @@ library-management
 A simple library management system API built with Spring Boot and Maven.
 
 **Features**
+
 Register a new borrower to the library.
 Register a new book to the library.
 Get a list of all books in the library.
 Borrow a book with a particular book id.
 Return a borrowed book.
+
+
 **Data Models**
 
 Borrower
@@ -17,6 +20,8 @@ name: Name of the borrower.
 email: Email address of the borrower.
 
 **Book**
+
+
 id: Unique identifier.
 isbn: ISBN number of the book.
 title: Title of the book.
@@ -32,6 +37,7 @@ Using maven
 
 
 **Build the Project**
+
 mvn clean install
 
 #### Run the Project
